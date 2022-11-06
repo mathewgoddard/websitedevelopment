@@ -1,0 +1,168 @@
+
+/* MOBILE FIRST APPROACH:
+  If the screen is less equal than 425px:
+  screen <= 425px
+  CSS styles for smartphones - DEFAULT 
+*/
+
+body {
+	background: white;	
+	font-family: "Times New Roman", serif;
+}
+
+* {/*star symbol means all HTML elements*/
+	box-sizing: border-box;/*Ref: https://www.w3schools.com/css/css3_box-sizing.asp*/
+	margin: 0;
+	padding: 0;
+}
+
+/*------------------------------------*/
+/*Nav Bar Styles*/
+nav {
+	min-height: 5vh;
+	background-color:#ABEBC6;
+	
+	/*Centralization*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	
+	display: inline-block;
+}
+
+nav ul li {
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+
+	/*dropdown menu*/
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;  
+	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.active {
+	background-color: orange;
+}
+
+nav ul li a:hover:not(.active) {
+	background-color: gray;
+}
+
+/*curtain menu*/
+
+.menu-button {
+	font-size:30px;
+	cursor:pointer;
+	background-color:pink;
+	padding: 4.5px;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.overlay {
+  /*size of the curtain menu*/
+  height: 100%;
+  width: 50%;
+  display: none;
+  position: fixed;  /*The element is positioned relative to the browser window*/
+  z-index: 1; /*start fro mthe top left corner*/
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+main {
+	min-height: 80vh;
+	background: white;
+}
+
+section {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+/*-----------------------*/
+/*Set styles for the SLIDESHOW */
+/*Centralize the slideShowImage*/
+#slideShowImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/*Set the image height and width for smartphones*/
+	height: 200px;
+}
+ */
+ @media only screen and (min-width: 426px) {
+	
+	/*Change the flex direction to row*/
+	.container-1 {
+		flex-direction: row;
+	}
+	
+	#slideShowImage {
+		/*Set the image height and width*/
+		height: 400px;
+	}
+	
+ }
+ 
+ *----------------------------------------------------------------*/
+ /*Else: all screen bigger than 768px
+   768px < screen
+   CSS Styles for big screens 
+ */
+ @media only screen and (min-width: 769px) {
+	#slideShowImage {
+		/*Set the image height and width*/
+		height: 600px;
+	}	
+ }

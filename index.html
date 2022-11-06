@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+
+	<!--Navigation bar-->
+	<nav>
+		<div class="menu-button" align="left" onclick="openNav()">&#9776; MENU</div>
+				
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="page2.html">Contact</a></li>
+			<li><a href="page3.html">About</a></li>
+			<li><a href="page4.html">Gallery</a></li>
+		</ul>
+	</nav>
+	
+		<div id="myNav" class="overlay">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <div class="overlay-content">
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Clients</a>
+			<a href="#">Contact</a>
+		  </div>
+		</div>
+		
+		<script>
+		function openNav() {
+		  document.getElementById("myNav").style.display = "block";
+		}
+
+		function closeNav() {
+		  document.getElementById("myNav").style.display = "none";
+		}
+		</script>
+	
+
+	<main>
+
+		<section>
+		</section>
+
+		
+	</main>
+
+
+  <footer>
+  </footer>
+  
+
+  <script src="JS/javascript.js"></script>
+  
+</body>
+</html>
